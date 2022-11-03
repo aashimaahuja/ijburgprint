@@ -1,11 +1,17 @@
 <html>
   <body>
     <h1>Ijburg Print shop</h1>
+    <button onclick=openChat()>Chat with us</button>
     <script>
+        const CHAT_URL = 'https://api.whatsapp.com/send/?phone=31647621740&text&type=phone_number&app_absent=0'
         window.addEventListener('load', (event) => {
           console.log('page is fully loaded');
-          window.location.href='https://api.whatsapp.com/?phone=31647621740';
+          window.location.href=CHAT_URL;
         });
+      
+        const openChat = () => {
+          window.location.href=CHAT_URL;
+        }
       console.log('testing script worked');
     </script>
   </body>
